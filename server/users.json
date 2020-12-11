@@ -1,0 +1,3 @@
+{"_id":{"$oid":"5fccbc40a701ba41980e4caa"},"role":"admin","artist":[],"name":"administrador","username":"Admin","password":"admin","createdAt":{"$date":"2020-12-06T11:10:56.853Z"},"updatedAt":{"$date":"2020-12-06T11:10:56.853Z"},"__v":0}
+{"_id":{"$oid":"5fd0b7fbba5b4834f16d466a"},"role":"user","username":"luisa","password":"$2b$10$qpz6oFBdo3ySK9v.DW7mFuEK5n40GYyk5jgeh3WmavjEMpRqmC49W","createdAt":{"$date":"2020-12-09T11:41:47.195Z"},"updatedAt":{"$date":"2020-12-09T11:41:47.195Z"},"__v":0}
+{"_id":{"$oid":"5fd0f610ba5b4834f16d466b"},"role":"user","username":"maru","password":"$2b$10$3gGveCJMgzz4pIySJkCTEujIkEm8VSM5cV8LQcRvrkezZKwdbcFVC","createdAt":{"$date":"2020-12-09T16:06:40.023Z"},"updatedAt":{"$date":"2020-12-09T16:06:40.023Z"},"__v":0}

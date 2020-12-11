@@ -4,7 +4,6 @@ const Schema = mongoose.Schema
 const userSchema = new Schema({
     name: {
         type: String,
-        required: true,
     },
     username: String,
     password: String,
@@ -13,6 +12,7 @@ const userSchema = new Schema({
         enum: ['admin', 'user'],
         default: 'user'
     },
+    favourites: [Object]
 
 }, {
     timestamps: true
