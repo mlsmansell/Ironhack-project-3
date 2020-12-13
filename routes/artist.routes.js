@@ -54,15 +54,23 @@ router.post('/deleteArtist/:artist_id', (req, res) => {
     .catch(err => res.status(500).json(err))
 })
 
-// FILTER ARTISTS
 
-// router.get('/pop', (req, res ) => {
-    
-//     Artist
-//         .find({ genre: pop })
-//         .then(response => res.json(response))
-//         .catch(err => res.status(500).json(err))
-// })
+router.post('/deleteArtistFromAUser/:artist_id', (req, res) => {
+
+    User
+        .findByIdAndUpdate(req.params.user_id, req.body)
+        .then(response => res.json(response))
+        .catch(err => res.status(500).json(err))
+  })
+  
+  
+  
+router.get('/getArtistsByText/:genre', (req, res) => { 
+    Artist
+        .find({'genre':req.params.genre})
+        .then(response => res.json(response ))
+        .catch(err => res.status(500).json(err))
+})
 
 
 module.exports = router
