@@ -10,8 +10,10 @@ export default class ArtistService {
     }
 
     getArtists = () => this.apiHandler.get('/getAllArtists')
+    getArtistsByText = artistId => this.apiHandler.get(`/getArtistsByText/${artistId}`)
     getArtist = artistId => this.apiHandler.get(`/getOneArtist/${artistId}`)
     saveArtist = artistInfo => this.apiHandler.post(`/newArtist/`, artistInfo)
     deleteArtist = artistId => this.apiHandler.post(`/deleteArtist/${artistId}`)
+    deleteArtistFromAUser = artistId => this.apiHandler.post(`/deleteArtistFromAUser/${artistId}`)
     editArtist = (artistId, editedArtist) => this.apiHandler.put(`/editArtist/${artistId}`, editedArtist)
 }
