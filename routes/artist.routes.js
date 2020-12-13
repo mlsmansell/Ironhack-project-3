@@ -54,4 +54,15 @@ router.post('/deleteArtist/:artist_id', (req, res) => {
     .catch(err => res.status(500).json(err))
 })
 
+// FILTER ARTISTS
+
+// router.get('/pop', (req, res ) => {
+    
+//     Artist
+//         .find({ genre: pop })
+//         .then(response => res.json(response))
+//         .catch(err => res.status(500).json(err))
+// })
+
+
 module.exports = router
