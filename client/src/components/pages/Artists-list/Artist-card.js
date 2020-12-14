@@ -49,7 +49,7 @@ class ArtistCard extends Component {
                                 to={`/artists/${this.props._id}`}
                             >
                                 Show Details
-              </Link>
+                            </Link>
                             {((this.props.loggedUser != undefined && this.props.loggedUser.role == "admin") || this.props.isFromUser) && (
                                 <Button
                                     variant="outline-secondary"

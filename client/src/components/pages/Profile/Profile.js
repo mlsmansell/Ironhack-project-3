@@ -27,6 +27,7 @@ class Profile extends Component {
 
                 <Container>
                     <h1>Hi {this.props.loggedUser.username} welcome to your profile!</h1>
+                    <p>Here you can save your favourite artists and their info, have fun!</p>
                     <Row>
 
                         {this.props.loggedUser.favourites.map(elm => <ArtistCard refreshUser={() => this.props.refreshUser()} loggedUser={this.props.loggedUser} isFromUser key={elm._id}{...elm} />)}

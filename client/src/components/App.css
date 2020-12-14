@@ -5,11 +5,11 @@ body {
 h1 {
   font-weight: 300;
   margin-bottom: 30px;
-
 }
-
 
 .btn-outline-secondary{
   font-size: 14px;
   padding: 4px 8px;
+  margin-right: 10px;
 }
+

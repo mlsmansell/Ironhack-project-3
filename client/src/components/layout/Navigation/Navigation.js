@@ -24,7 +24,7 @@ class Navigation extends Component {
     return (
       <Navbar bg="light" expand="md">
         <Link to="/">
-          <Navbar.Brand className="titulo-navbar"> Your Favourite Artists </Navbar.Brand>
+          <Navbar.Brand className="titulo-navbar"> _MMF!_ </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

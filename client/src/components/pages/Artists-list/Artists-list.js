@@ -60,10 +60,10 @@ class ArtistList extends Component {
           </Button>
                     }
 
-                    <input placeholder={'Busca por genero'} type="text" value={this.state.value} onChange={text => this.handleChange(text)} />
+                    <input placeholder={'Filter by Genre'} type="text" value={this.state.value} onChange={text => this.handleChange(text)} />
                     <Row>
                         {this.state.artists.length == 0 ? (
-                            <div>no hay resultados</div>
+                            <div>No matches found</div>
                         )
                             :
                             this.state.artists.map((elm) => (

@@ -1,5 +1,12 @@
 .titulo-navbar{
-font-weight: lighter;
+font-weight: bold;
+font-size: 25px;
 margin-left: 40px;
+margin-bottom: 10px;
+margin-top: 10px;
+
 }
 
+.navbar{
+    background-color: transparent;
+}

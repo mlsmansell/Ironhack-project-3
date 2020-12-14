@@ -65,7 +65,7 @@ class ArtistDetails extends Component {
           <h1>{this.state.artist.name}</h1>
           <Row>
             <Col md={6}>
-              <img className="artist-img" src={this.state.artist.imageUrl} alt={this.state.artist.name} />
+              <img src={this.state.artist.imageUrl} alt={this.state.artist.name} />
             </Col>
             <Col md={4}>
               <h3>Description</h3>
