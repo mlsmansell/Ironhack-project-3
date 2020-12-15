@@ -2,6 +2,7 @@ const express = require("express")
 const router = express.Router()
 const passport = require("passport")
 const bcrypt = require("bcrypt")
+const mongoose = require('mongoose')
 
 
 const User = require("../models/user.model")
@@ -91,5 +92,26 @@ router.put('/editUser/:user_id', (req, res) => {
         .catch(err => res.status(500).json(err))
 })
 
+
+router.get('/all', (req, res) => {
+    User
+        .find({ 'role': 'user' })
+        .then(response => res.json(response))
+        .catch(err => res.status(500).json(err))
+})
+
+
+router.get('/getOneUser/:artist_id', (req, res) => {
+
+    if (!mongoose.Types.ObjectId.isValid(req.params.artist_id)) {
+        res.status(404).json({ message: 'Invalid ID' })
+        return
+    }
+
+    User
+        .findById(req.params.artist_id)
+        .then(response => res.json(response))
+        .catch(err => res.status(500).json(err))
+})
 
 module.exports = router
