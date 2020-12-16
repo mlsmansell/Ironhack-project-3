@@ -14,6 +14,8 @@ import Signup from "./pages/Signup/Signup";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
+import Users from "./pages/Users/Users";
+import UserProfile from "./pages/UserProfile/UserProfile";
 
 import AuthServices from "./../service/auth.service";
 
@@ -54,6 +56,8 @@ class App extends Component {
 
         <main>
           <Switch>
+            <Route path="/users" exact render={(props) => (<Users {...props} loggedUser={this.state.loggedInUser} />)} />
+            <Route path="/users/:user_id" exact render={(props) => (<UserProfile {...props} loggedUser={this.state.loggedInUser} />)} />
             <Route path="/artists" exact render={(props) => (<ArtistList {...props} loggedUser={this.state.loggedInUser} />)} />
             <Route path="/artists/:artist_id" exact render={(props) => (<ArtistDetails {...props} loggedUser={this.state.loggedInUser} />)} />
             <Route path="/create" render={() => <ArtistForm />} />

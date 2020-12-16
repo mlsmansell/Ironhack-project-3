@@ -83,7 +83,7 @@ class DetailsForm extends Component{
                         <Form.Label>Recommended Album</Form.Label>
                         <Form.Control type="text" name="recommendedAlbum" value={this.state.artist.recommendedAlbum} onChange={this.handleInputChange} />
                     </Form.Group>
-                    <Button variant="outline-secondary" size="sm" type="submit">Edit Artist</Button>
+                    <Button variant="outline-secondary" size="sm" style={{marginTop: "10px"}} type="submit">Edit Artist</Button>
                     </Form>
                     </> :
                     null

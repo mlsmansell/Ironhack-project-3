@@ -1,5 +1,10 @@
 .carusel {
   position: relative;
-  height: 70vh;
+  height: 91vh;
   overflow: hidden;
 }
+
+/* .carrImg{
+  min-height: 91vh !important;
+  width: auto !important;
+} */

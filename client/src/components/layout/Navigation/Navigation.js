@@ -35,22 +35,27 @@ class Navigation extends Component {
             <Link to="/artists">
               <Nav.Link as="div">Artists</Nav.Link>
             </Link>
+            {this.props.loggedUser &&
+              <Link to="/users">
+                <Nav.Link as="div">Users</Nav.Link>
+              </Link>
+            }
             {this.props.loggedUser ? (
               <Nav.Link as="div" onClick={this.logOut}> Logout </Nav.Link>
             ) : (
-              <>
-                <Link to="/signup">
-                  <Nav.Link as="div">Sign up</Nav.Link>
-                </Link>
-                <Link to="/login">
-                  <Nav.Link as="div">Login</Nav.Link>
-                </Link>
-              </>
-            )}
+                <>
+                  <Link to="/signup">
+                    <Nav.Link as="div">Sign up</Nav.Link>
+                  </Link>
+                  <Link to="/login">
+                    <Nav.Link as="div">Login</Nav.Link>
+                  </Link>
+                </>
+              )}
             <Link to="/profile">
               <Nav.Link as="div">
-                Hello,{" "}
-                {this.props.loggedUser ? this.props.loggedUser.username : "new guest"}
+                Hello {" "}
+                {this.props.loggedUser ? this.props.loggedUser.username : "new guest"}!
               </Nav.Link>
             </Link>
           </Nav>

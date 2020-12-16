@@ -53,7 +53,7 @@ class Signup extends Component {
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control type="password" name="password" value={this.state.password} onChange={this.handleInputChange} />
                                 </Form.Group>
-                                <Button variant="outline-secondary" size="sm" type="submit">Signup</Button>
+                                <Button variant="outline-secondary" size="sm" style={{marginTop: "10px"}} type="submit">Signup</Button>
                             </Form>
                         </Col>
                     </Row>

@@ -2,8 +2,8 @@ const express = require("express")
 const router = express.Router()
 const passport = require("passport")
 const bcrypt = require("bcrypt")
-const mongoose = require('mongoose')
 
+const { checkId } = require('./middlewares')
 
 const User = require("../models/user.model")
 
@@ -101,15 +101,19 @@ router.get('/all', (req, res) => {
 })
 
 
-router.get('/getOneUser/:artist_id', (req, res) => {
-
-    if (!mongoose.Types.ObjectId.isValid(req.params.artist_id)) {
-        res.status(404).json({ message: 'Invalid ID' })
-        return
-    }
+router.get('/getOneUser/:artist_id', checkId, (req, res) => {
 
     User
         .findById(req.params.artist_id)
+        .then(response => res.json(response))
+        .catch(err => res.status(500).json(err))
+})
+
+
+
+router.get('/getUserByText/:name', (req, res) => {
+    User
+        .find({ 'username': req.params.name })
         .then(response => res.json(response))
         .catch(err => res.status(500).json(err))
 })
