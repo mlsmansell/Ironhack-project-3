@@ -1,9 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const mongoose = require('mongoose')
 
 const Artist = require('../models/artist.model')
-
+const { checkId } = require('./middlewares')
 
 router.get('/getAllArtists', (req, res) => {
 
@@ -14,12 +13,7 @@ router.get('/getAllArtists', (req, res) => {
 })
 
 
-router.get('/getOneArtist/:artist_id', (req, res) => {
-
-    if (!mongoose.Types.ObjectId.isValid(req.params.artist_id)) {
-        res.status(404).json({ message: 'Invalid ID' })
-        return
-    }
+router.get('/getOneArtist/:artist_id', checkId, (req, res) => {
 
     Artist
         .findById(req.params.artist_id)
