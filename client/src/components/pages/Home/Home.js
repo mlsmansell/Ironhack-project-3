@@ -4,8 +4,8 @@ import './Home.css'
 
 import img1 from './ImgCarrusel/Gorillaz.jpg' 
 import img2 from './ImgCarrusel/CatPower.jpg' 
-import img3 from './ImgCarrusel/YlaBamba.jpg' 
-import img4 from './ImgCarrusel/IronandWine.jpg'
+import img3 from './ImgCarrusel/IronandWine.jpg'
+import img4 from './ImgCarrusel/rosenvinge.jpg' 
 
 
 
@@ -44,14 +44,14 @@ class  Home  extends Component    {
           <img
             className="d-block w-100" 
           src={img3}    
-            alt="Y la Bamba"
+            alt="Iron and wine"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100" 
           src={img4}    
-            alt="Iron and wine"
+            alt="Rosenvinge"
           />
         </Carousel.Item>
       </Carousel>

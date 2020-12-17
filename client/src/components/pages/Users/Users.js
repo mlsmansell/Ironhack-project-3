@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import AuthService from "./../../../service/auth.service";
-import { Container, Row, Button, Card } from "react-bootstrap";
+import { Container, Row, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
@@ -50,8 +50,8 @@ class User extends Component {
                             this.state.users.map((user) => (
                                 <Card style={{ width: '18rem', marginRight:"20px", marginBottom:"20px" }}>
                                     <Card.Body>
-                                        <Card.Title>{user.username}</Card.Title>
-                                        <Button variant="outline-secondary" size="sm" ><Link style={{color:"grey", textDecoration:"none"}} to={`/users/${user._id}`}> See profile </Link></Button>
+                                        <Card.Title style={{marginTop: "5px"}}>{user.username}</Card.Title>
+                                        <Link className="btn btn-outline-secondary" size="sm" style={{marginBottom: "10px", marginTop: "10px"}} to={`/users/${user._id}`}> See profile </Link>
                                     </Card.Body>
                                 </Card>
                             ))}
